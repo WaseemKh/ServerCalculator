@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
-//set Variable Referance value
+
+//set Variable Referance Key and value
 Dictionary<string, object> d1 = new();
 d1.Add("x", 5);
 d1.Add("y", 10);
@@ -17,7 +17,7 @@ Console.WriteLine(o1.Evaluate(d1));
 Operation o2 = new Operation(new Constant(300), '/', new VarReferance("y"));
 Console.WriteLine(o2.Evaluate(d1));
 
-//thired Calculater
+//thired Calculation
 Operation o3 = new(new Operation(new Constant(6), '*', new VarReferance("x")), '-', new Operation(new Constant(300), '/', new VarReferance("y")));
 Console.WriteLine(o3.Evaluate(d1));
 
